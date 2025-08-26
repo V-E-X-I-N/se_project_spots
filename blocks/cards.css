@@ -1,0 +1,31 @@
+.cards {
+  padding-top: 20px;
+}
+
+.cards__list {
+  list-style-type: none;
+  padding: 0 0 40px;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 413px);
+  gap: 40px 20px;
+  border-bottom: 1px rgba(33 33, 33, 0.4) solid;
+}
+
+@media screen and (max-width: 627px) {
+  /* .cards__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  } */
+
+  .cards__list {
+    grid-template-columns: repeat(auto-fit, 288px);
+    padding: 0 0 22px;
+  }
+
+  .card__image {
+    padding: 0;
+  }
+}

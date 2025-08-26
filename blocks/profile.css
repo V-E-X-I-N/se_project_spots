@@ -1,0 +1,147 @@
+.profile {
+  display: flex;
+  margin: 0 auto;
+  padding: 34px 0 20px;
+  border-bottom: 1px rgba(33 33, 33, 0.4) solid;
+  max-width: 1280px;
+  gap: 20px;
+}
+
+.profile__avatar {
+  margin: 0;
+  width: 190px;
+  height: 190px;
+  border-radius: 10px;
+}
+
+.profile__column {
+  display: flex;
+  flex-direction: column;
+  max-width: 420px;
+}
+
+.profile__name {
+  margin: 0;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-width: 420px;
+}
+
+.profile__description {
+  margin: 0;
+  padding-top: 12px;
+  color: rgba(33 33, 33, 0.7);
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-width: 420px;
+}
+
+.profile__edit-button {
+  margin-top: auto;
+  margin-right: auto;
+  gap: 3px;
+  font-style: medium;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  white-space: nowrap;
+  border: none;
+  box-shadow: none;
+  background-color: #fcf5e5;
+  color: rgba(33 33, 33, 0.7);
+}
+
+.profile__edit-button img {
+  display: inline-flex;
+  align-items: center;
+  border: none;
+}
+
+.profile__add-button {
+  margin-left: auto;
+  margin-top: auto;
+  background-color: #212121;
+  border-radius: 10px;
+  color: #fcf5e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: medium;
+  font-size: 16px;
+  line-height: 100%;
+  width: 149px;
+  height: 52px;
+  gap: 8px;
+}
+
+.profile__add-button img {
+  width: 12px;
+  height: 12px;
+  display: block;
+}
+
+@media screen and (max-width: 627px) {
+  .profile {
+    flex-direction: column;
+    max-width: 288px;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+    gap: 0;
+    padding-bottom: 20px;
+    margin: 0;
+  }
+
+  .profile img {
+    padding-bottom: 12px;
+  }
+
+  .profile__name {
+    font-size: 20px;
+    margin-bottom: 6px;
+    max-width: 288px;
+  }
+
+  .profile__description {
+    padding-top: 0;
+    font-size: 16px;
+    margin-bottom: 20px;
+    max-width: 288px;
+  }
+
+  .profile__avatar {
+    margin-right: 0;
+    width: 80px;
+    height: 80px;
+  }
+
+  .profile__add-button {
+    margin: 0;
+    width: 288px;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 18px 32px;
+  }
+
+  .profile__edit-button {
+    margin: 0;
+    font-size: 16px;
+    padding-bottom: 20px;
+  }
+
+  .profile__edit-button img {
+    padding: 0;
+    opacity: 70%;
+  }
+}
