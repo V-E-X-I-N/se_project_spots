@@ -9,9 +9,10 @@
 
 .profile__avatar {
   margin: 0;
+  object-fit: cover;
   width: 190px;
   height: 190px;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .profile__column {
@@ -51,7 +52,7 @@
   display: flex;
   margin-top: auto;
   margin-right: auto;
-  gap: 3px;
+  gap: 8px;
   font-style: medium;
   font-weight: 500;
   font-size: 16px;
@@ -60,12 +61,14 @@
   border: none;
   box-shadow: none;
   background-color: #fcf5e5;
-  color: rgba(33 33, 33, 0.7);
+  color: #212121;
   transition: 0.5s;
+  opacity: 0.7;
+  padding: 0;
 }
 
 .profile__edit-button:hover {
-  color: #212121;
+  opacity: 1;
   cursor: pointer;
 }
 
@@ -80,7 +83,8 @@
   margin-left: auto;
   margin-top: auto;
   background-color: #212121;
-  border-radius: 10px;
+  border: none;
+  border-radius: 8px;
   color: #fcf5e5;
   display: flex;
   align-items: center;
