@@ -1,4 +1,4 @@
-# Project 3: Spots
+<!-- # Project 3: Spots
 
 ### Overview
 
@@ -18,7 +18,7 @@ This project is made so all the elements are displayed correctly on popular scre
 
 The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster.
 
-Good luck and have fun!
+Good luck and have fun! -->
 
 # Project 3: Spots
 
@@ -46,3 +46,9 @@ Fully responsive (320px+)
 ## Deployed project
 
 [- Deployment Link ](https://v-e-x-i-n.github.io/se_project_spots/)
+
+## Demo Video
+
+![alt text](image.png)
+
+[\[Watch the demo\]](https://drive.google.com/file/d/1gtKgGpsIPsj9LTwl1nDQf2IzFGBpnfJ6/view?usp=sharing)
