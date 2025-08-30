@@ -1,7 +1,7 @@
 .card__image {
   width: 100%;
   height: 413px;
-  border-radius: 10px;
+  border-radius: 8px;
   margin-bottom: 12px;
   object-fit: cover;
   display: block;
@@ -30,11 +30,12 @@
   width: 23px;
   height: 20px;
   border: none;
+  opacity: 0.4;
   transition: opacity 0.5s;
 }
 
 .card__like-button:hover {
-  opacity: 0.4;
+  opacity: 1;
   cursor: pointer;
 }
 
