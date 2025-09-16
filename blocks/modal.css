@@ -10,10 +10,14 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
+  opacity: 0;
+  transition: opacity 1s ease, visibility 0s linear 1s;
 }
 
 .modal_is-opened {
   visibility: visible;
+  opacity: 1;
+  transition: opacity 1s ease, visibility 0s linear 0s;
 }
 
 .modal__container {
@@ -49,12 +53,9 @@
 
 .modal__close-button {
   background-image: url(../images/close-icon.svg);
-  /* position: absolute; */
   width: 40px;
   height: 40px;
   padding: 0;
-  /* top: 32px;
-  right: 50px; */
   background-color: transparent;
   border: none;
   opacity: 0.4;
@@ -80,6 +81,11 @@
   color: #212121;
   opacity: 0.4;
   border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.modal__input:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 
 .modal__input::placeholder {
