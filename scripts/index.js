@@ -22,7 +22,7 @@ const editProfileDescriptionInput = editProfilePage.querySelector(
 //------------------- New Post Page ---------------------------------------
 const newPostCloseButton = newPostPage.querySelector(".modal__close-button");
 const newPostForm = newPostPage.querySelector(".modal__form");
-const editCardImageInput = newPostPage.querySelector("#card-image-input");
+const newPostCardImageInput = newPostPage.querySelector("#card-image-input");
 const editCardCaptionInput = newPostPage.querySelector("#card-caption-input");
 
 // ---------------- Event Listners  --------------------------------------
@@ -60,6 +60,7 @@ function handleEditProfileSubmit(evt) {
 function handleNewPostSubmit(evt) {
   evt.preventDefault();
   newPostPage.classList.remove("modal_is-opened");
-  console.log(editCardImageInput.value);
+  console.log(newPostCardImageInput.value);
   console.log(editCardCaptionInput.value);
+  evt.target.reset();
 }
