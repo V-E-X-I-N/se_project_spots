@@ -25,42 +25,50 @@ const newPostForm = newPostPage.querySelector(".modal__form");
 const newPostCardImageInput = newPostPage.querySelector("#card-image-input");
 const editCardCaptionInput = newPostPage.querySelector("#card-caption-input");
 
-// ---------------- Event Listners  --------------------------------------
-
-editProfile.addEventListener("click", function () {
-  editProfilePage.classList.add("modal_is-opened");
-  editProfileNameInput.value = profileNameEl.textContent;
-  editProfileDescriptionInput.value = profileDescriptionEl.textContent;
-});
-
-editProfileCloseButton.addEventListener("click", function () {
-  editProfilePage.classList.remove("modal_is-opened");
-});
-
-addPost.addEventListener("click", function () {
-  newPostPage.classList.add("modal_is-opened");
-});
-
-newPostCloseButton.addEventListener("click", function () {
-  newPostPage.classList.remove("modal_is-opened");
-});
-
-editProfileForm.addEventListener("submit", handleEditProfileSubmit);
-newPostForm.addEventListener("submit", handleNewPostSubmit);
-
 // --------------------Functions-----------------------------
 
 function handleEditProfileSubmit(evt) {
   evt.preventDefault();
   profileNameEl.textContent = editProfileNameInput.value;
   profileDescriptionEl.textContent = editProfileDescriptionInput.value;
-  editProfilePage.classList.remove("modal_is-opened");
+  closeModal(editProfilePage);
 }
 
 function handleNewPostSubmit(evt) {
   evt.preventDefault();
-  newPostPage.classList.remove("modal_is-opened");
+  openModal(newPostPage);
   console.log(newPostCardImageInput.value);
   console.log(editCardCaptionInput.value);
   evt.target.reset();
 }
+
+function openModal(modal) {
+  modal.classList.add("modal_opened");
+}
+
+function closeModal(modal) {
+  modal.classList.remove("modal_opened");
+}
+
+// ---------------- Event Listners  --------------------------------------
+
+editProfile.addEventListener("click", () => {
+  openModal(editProfilePage);
+  editProfileNameInput.value = profileNameEl.textContent;
+  editProfileDescriptionInput.value = profileDescriptionEl.textContent;
+});
+
+editProfileCloseButton.addEventListener("click", () => {
+  closeModal(editProfilePage);
+});
+
+addPost.addEventListener("click", () => {
+  openModal(newPostPage);
+});
+
+newPostCloseButton.addEventListener("click", () => {
+  closeModal(newPostPage);
+});
+
+editProfileForm.addEventListener("submit", handleEditProfileSubmit);
+newPostForm.addEventListener("submit", handleNewPostSubmit);
