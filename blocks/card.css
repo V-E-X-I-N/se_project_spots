@@ -5,6 +5,7 @@
   margin-bottom: 12px;
   object-fit: cover;
   display: block;
+  cursor: pointer;
 }
 
 .card {

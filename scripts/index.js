@@ -2,7 +2,7 @@
 const initialCards = [
   {
     name: "Golden Gate Bridge",
-    link: " https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
   },
 
   {
@@ -77,7 +77,7 @@ function handleEditProfileSubmit(evt) {
 
 function handleNewPostSubmit(evt) {
   evt.preventDefault();
-  openModal(newPostPage);
+  closeModal(newPostPage);
 
   const inputValues = {
     name: editCardCaptionInput.value,
@@ -147,7 +147,6 @@ function getCardElement(data) {
   const cardDeleteButton = cardElement.querySelector(".card__delete-button");
   cardDeleteButton.addEventListener("click", () => {
     cardElement.remove();
-    cardElement = null;
   });
 
   cardImgEl.addEventListener("click", () => {
