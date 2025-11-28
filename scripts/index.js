@@ -1,4 +1,4 @@
-// -------------- Main Doc Selection Section ----------------
+// Main Doc Selection
 const initialCards = [
   {
     name: "Golden Gate Bridge",
@@ -43,12 +43,13 @@ const newPostPage = document.querySelector("#new-post-modal");
 const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
 
+const formSubmitButton = newPostPage.querySelector(".modal__submit-button");
 const previewModal = document.querySelector("#preview-modal");
 const previewCloseButton = previewModal.querySelector(".modal__close-button");
 const previewImgEl = previewModal.querySelector(".modal__image");
 const previewCaptionEl = previewModal.querySelector(".modal__caption");
 
-//------------------ Edit Page --------------------------------------
+// Edit Form
 const editProfileCloseButton = editProfilePage.querySelector(
   ".modal__close-button"
 );
@@ -60,13 +61,13 @@ const editProfileDescriptionInput = editProfilePage.querySelector(
   "#profile-description-input"
 );
 
-//------------------- New Post Page ---------------------------------------
+// New Post Form
 const newPostCloseButton = newPostPage.querySelector(".modal__close-button");
 const newPostForm = newPostPage.querySelector(".modal__form");
 const newPostCardImageInput = newPostPage.querySelector("#card-image-input");
 const editCardCaptionInput = newPostPage.querySelector("#card-caption-input");
 
-// --------------------Functions--------------------------------------------
+// Functions
 
 function handleEditProfileSubmit(evt) {
   evt.preventDefault();
@@ -87,23 +88,53 @@ function handleNewPostSubmit(evt) {
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
   evt.target.reset();
+  disableButton(formSubmitButton, settings);
 }
+// Escape Button Exit
+
+function EscapeCloseBtn(evt) {
+  if (evt.key === "Escape") {
+    const openModal = document.querySelector(".modal_opened");
+    if (openModal) {
+      closeModal(openModal);
+    }
+  }
+}
+
+// Open + Close Functions
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  document.addEventListener("keydown", EscapeCloseBtn);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  document.removeEventListener("keydown", EscapeCloseBtn);
 }
 
-// ----------------------------------------------------------------------------------------
+// Overlay Click Exit
+
+const modalOverlayClose = document.querySelectorAll(".modal");
+modalOverlayClose.forEach((modal) => {
+  modal.addEventListener("mousedown", (evt) => {
+    if (evt.target === modal) {
+      closeModal(modal);
+    }
+  });
+});
 
 editProfile.addEventListener("click", () => {
   openModal(editProfilePage);
   editProfileNameInput.value = profileNameEl.textContent;
   editProfileDescriptionInput.value = profileDescriptionEl.textContent;
+  resetValidation(editProfileForm, [
+    editProfileNameInput,
+    editProfileDescriptionInput,
+  ]);
 });
+
+// Open + Close Buttons
 
 editProfileCloseButton.addEventListener("click", () => {
   closeModal(editProfilePage);
