@@ -51,4 +51,6 @@ Fully responsive (320px+)
 
 ![[Demo img]](Spots.png)
 
-[\[Watch the demo\]](https://drive.google.com/file/d/1gtKgGpsIPsj9LTwl1nDQf2IzFGBpnfJ6/view?usp=sharing)
+[- First Demo Video Link ](https://drive.google.com/file/d/1gtKgGpsIPsj9LTwl1nDQf2IzFGBpnfJ6/view?usp=sharing)
+
+[- Second Demo Video Link ](https://drive.google.com/file/d/1vvy8MrKFCn9RwrjcEgt8boKrvxCJkUdl/view?usp=sharing)
