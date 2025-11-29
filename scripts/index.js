@@ -92,7 +92,7 @@ function handleNewPostSubmit(evt) {
 }
 // Escape Button Exit
 
-function EscapeCloseBtn(evt) {
+function escapeCloseBtn(evt) {
   if (evt.key === "Escape") {
     const openModal = document.querySelector(".modal_opened");
     if (openModal) {
@@ -105,12 +105,12 @@ function EscapeCloseBtn(evt) {
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
-  document.addEventListener("keydown", EscapeCloseBtn);
+  document.addEventListener("keydown", escapeCloseBtn);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
-  document.removeEventListener("keydown", EscapeCloseBtn);
+  document.removeEventListener("keydown", escapeCloseBtn);
 }
 
 // Overlay Click Exit
